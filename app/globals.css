@@ -18,3 +18,7 @@
   align-items: center;
   z-index: 2;
 }
+
+.class {
+  opacity: 0.2;
+}

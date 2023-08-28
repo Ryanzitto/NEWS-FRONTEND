@@ -1,21 +1,17 @@
-import {
-  ContactShadows,
-  OrbitControls,
-  Sky,
-  Environment,
-} from "@react-three/drei";
+import { ContactShadows, OrbitControls, Environment } from "@react-three/drei";
 
 import { Avatar } from "../3D/Avatar";
+import { useState } from "react";
 
 export const Experience = () => {
+  const [anim, setAnim] = useState("Idle");
+
   return (
     <>
       <group position-y={-2.5}>
         <OrbitControls
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 6}
-          enableRotate={false}
-          enableZoom={false}
         />
         <ContactShadows
           opacity={1}
@@ -27,7 +23,7 @@ export const Experience = () => {
         <directionalLight intensity={1} />
         <ambientLight intensity={1} />
         <Environment preset="sunset" />
-        <Avatar />
+        <Avatar animation={anim} />
       </group>
     </>
   );

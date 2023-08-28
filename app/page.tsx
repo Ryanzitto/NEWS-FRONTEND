@@ -5,7 +5,7 @@ import { Experience } from "./components/experiense";
 export default function Home() {
   return (
     <main className="flex min-h-screen h-screen bg-zinc-900 justify-center items-center">
-      <div className="w-[70%] h-full flex flex-col pl-6">
+      <div className="w-[65%] h-full flex flex-col pl-6">
         <header className="h-32 w-full flex justify-start items-end text-white font-bold text-lg">
           <div className="flex flex-col justify-center pl-20">
             <span>👋 OLÁ, EU SOU</span>
@@ -41,8 +41,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-[30%] h-full bg-gradient-to-b from-[#B30DEE] text-sm text-white font-bold">
-        <header className="w-full tracking-wide flex justify-center pt-6">
+      <div className="w-[35%] h-full bg-gradient-to-b from-[#B30DEE] text-sm text-white font-bold">
+        <header className="w-full tracking-wide flex justify-start pt-6 pl-8">
           <ul className="flex gap-6">
             <li className="cursor-pointer">
               <a>HOME</a>
@@ -56,7 +56,7 @@ export default function Home() {
           </ul>
         </header>
         <div className="w-full flex justify-center">
-          <div className="w-3/4 h-[450px] bg-green-500 mt-12">
+          <div className="w-[400px] h-[500px] mt-12 bg-blue-500 absolute mr-40">
             <Canvas>
               <Experience />
             </Canvas>

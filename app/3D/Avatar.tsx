@@ -43,10 +43,10 @@ type ContextType = Record<
   >
 >;
 
-export function Avatar(props: JSX.IntrinsicElements["group"]) {
-  const [animation, setanimation] = useState<any>("Idle");
-
+export function Avatar(props: JSX.IntrinsicElements["group"] | any) {
   const group = useRef(null);
+
+  const { animation } = props;
 
   const { nodes, materials } = useGLTF("models/Avatar.glb") as GLTFResult;
 
@@ -71,16 +71,15 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
         danceAction.fadeOut(0.5);
       };
     }
-  }, [actions]);
+  }, [actions, animation]);
 
-  console.log(group.current);
   return (
     <group
       {...props}
       ref={group}
       dispose={null}
       scale={2.8}
-      rotation-x={Math.PI * 1.5}
+      rotation={[Math.PI * 1.5, Math.PI * 6, 0]}
     >
       <primitive object={nodes.Hips} />
       <skinnedMesh
