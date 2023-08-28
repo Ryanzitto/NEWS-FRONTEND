@@ -4,16 +4,18 @@ import {
   Sky,
   Environment,
 } from "@react-three/drei";
-import * as THREE from "three";
+
 import { Avatar } from "../3D/Avatar";
 
 export const Experience = () => {
   return (
     <>
-      <group position-y={-1}>
+      <group position-y={-2.5}>
         <OrbitControls
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 6}
+          enableRotate={false}
+          enableZoom={false}
         />
         <ContactShadows
           opacity={1}

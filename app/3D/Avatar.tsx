@@ -73,18 +73,13 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
     }
   }, [actions]);
 
-  // useFrame((state) => {
-  //   const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-  //   group.current.getObjectByName("Head").lookAt(target);
-  // });
-
   console.log(group.current);
   return (
     <group
       {...props}
       ref={group}
       dispose={null}
-      scale={1}
+      scale={2.8}
       rotation-x={Math.PI * 1.5}
     >
       <primitive object={nodes.Hips} />
